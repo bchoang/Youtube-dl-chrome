@@ -1,0 +1,19 @@
+<!DOCTYPE=html>
+<html>
+	<head>
+		<title>YouTube Downloader Extension</title>
+		<style></style>
+	</head>
+	<body>
+		<script src="./popup.js"> </script>
+		<!--TODO: change action to send query to server-->
+		<form id="downloadform">
+			Filepath: (i.e. /Users/brandonhoang/Desktop/)<br>
+			<input type="text" id="filepath" value="/Users/brandonhoang/Desktop">
+			Filename: (blank defaults to video title)<br>
+			<input type="text" id="filename" value="Song - Artist">
+		</form>
+		<button id="butt" type="submit" form="downloadform" value="Submit">cop my mixtape</button>
+		<p id="status">WAITING</p>
+	</body>
+</html>
