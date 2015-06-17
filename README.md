@@ -1,2 +1,3 @@
 # Youtube-dl-chrome
-foo
+
+Simple Youtube audio downloader.
