@@ -10,9 +10,10 @@
     "default_title" : "Youtube Downloader",
     "default_popup" : "popup.html"
   },
-
+  "options_page": "options.html",
   "permissions" : [
     "http://*/",
-    "tabs"
+    "tabs",
+    "storage"
   ]
 }
