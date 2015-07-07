@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     link.addEventListener('click', function(e) {
         e.preventDefault();
 
-        var url = "";
-
         chrome.tabs.query({'active': true, 'lastFocusedWindow': true, 'currentWindow': true}, function (tabs) {
             var url = tabs[0].url;
             url = encodeURIComponent(url);
@@ -15,9 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
             var filepath = document.getElementById("filepath").value;
             filepath = encodeURIComponent(filepath);
 
-            document.getElementById("status").innerHTML = "DOWNLOADING";
-        
-            xmlhttp.open("GET","https://localhost:6299/?destination=" + filepath + "&quality=1080p&filter&format=audio+only&title&link=" + url,true);
+            var title = "";
+            if (document.getElementById("filename").value != "*Leave blank for video title") {
+                var title = "=" + encodeURIComponent(document.getElementById("filename").value);
+            } 
+
+            xmlhttp.open("GET","https://localhost:6299/?destination=" + filepath + "&quality=1080p&filter&format=audio+only&title" + title + "&link=" + url,true);
         
             xmlhttp.onload = function() {
                 if (xmlhttp.readyState === 4) {

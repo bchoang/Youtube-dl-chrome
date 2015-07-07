@@ -2,18 +2,56 @@
 <html>
 	<head>
 		<title>YouTube Downloader Extension</title>
-		<style></style>
+		<style>
+			/* Don't talk shit about my css skills its sexy ok*/
+
+			body {
+				padding: 5px;
+				background-color: #FCFBE3;
+			}
+			legend {
+				font-size: 11px;
+				color: gray;
+			}
+			fieldset{
+				font-size: 14px;
+			}
+			button {
+				margin: auto;
+				text-align: center;
+				background-color: #32CD32;
+				border: 1px solid;
+				border-color: green;
+				font-size: 20px;
+			}
+			#filepath {
+				width: 300px;
+				font-size: 14px;
+			}
+			#filename {
+				width: 300px;
+				font-size: 14px;
+			}
+			#kappa {
+				text-align: center;
+				padding-bottom: 0px;
+			}
+		</style>
 	</head>
 	<body>
 		<script src="./popup.js"> </script>
 		<!--TODO: change action to send query to server-->
-		<form id="downloadform">
+		<fieldset>
+			<legend>Options</legend>
 			Filepath: (i.e. /Users/brandonhoang/Desktop/)<br>
-			<input type="text" id="filepath" value="/Users/brandonhoang/Desktop">
-			Filename: (blank defaults to video title)<br>
-			<input type="text" id="filename" value="Song - Artist">
-		</form>
-		<button id="butt" type="submit" form="downloadform" value="Submit">cop my mixtape</button>
-		<p id="status">WAITING</p>
+			<input type="text" id="filepath" value="/Users/brandonhoang/Desktop/YouTubeMusic">
+			<br><br>Filename:<br>
+			<input type="text" id="filename" value="*Leave blank for video title">
+		</fieldset>
+		<br>
+		<div id="kappa">
+			<button id="butt" type="submit" form="downloadform" value="Submit">cop my mixtape</button>
+		</div>
 	</body>
+
 </html>
