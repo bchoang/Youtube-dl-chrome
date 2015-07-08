@@ -1,59 +1,54 @@
-<!DOCTYPE=html>
-<html>
-	<head>
-		<title>YouTube Downloader Extension</title>
-		<style>
-			/* Don't talk shit about my css skills its sexy ok*/
+<!DOCTYPE html>
+<head>
+	<title>YouTube Downloader Extension</title>
+</head>
+<body>
+	<script src="./popup.js"> </script>
 
-			body {
-				padding: 5px;
-				background-color: #FCFBE3;
-			}
-			legend {
-				font-size: 11px;
-				color: gray;
-			}
-			fieldset{
-				font-size: 14px;
-			}
-			button {
-				margin: auto;
-				text-align: center;
-				background-color: #32CD32;
-				border: 1px solid;
-				border-color: green;
-				font-size: 20px;
-			}
-			#filepath {
-				width: 300px;
-				font-size: 14px;
-			}
-			#filename {
-				width: 300px;
-				font-size: 14px;
-			}
-			#kappa {
-				text-align: center;
-				padding-bottom: 0px;
-			}
-		</style>
-	</head>
-	<body>
-		<script src="./popup.js"> </script>
-		<!--TODO: change action to send query to server-->
-		<fieldset>
-			<legend>Options</legend>
-			<br><br>Filename:<br>
-			<input type="text" id="filename" value="*Leave blank for video title">
-		</fieldset>
-		<br>
-		<div id="kappa">
-			<button id="butt" type="submit" form="downloadform" value="Submit">cop my mixtape</button>
+	<link href="./popupStyle.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+	<div class="row tabs">
+		<div class="col-sm-6">
+			<button id="songButton" class="btn btn-default tab"> Song </button>
 		</div>
+		<div class="col-sm-6">
+			<button id="playlistButton" class="btn btn-default tab"> Playlist </button>
+		</div>
+	</div>
 
-		<ul id="downloadList">
+	<div class="tabContent hidden" id="song">
+		<h2> Download Song </h2>
+		<form>
 
-		</ul>
-	</body>
+			<div class="form-group">
+				<label>Youtube video link</label>
+				<input type="text" class="form-control" id="songLink" placeholder="<link to video>">
+			</div>
+			<div class="form-group">
+				<label>Song Title</label>
+				<input type="text" class="form-control" id="songTitle" placeholder="leaving this blank defaults to youtube title">
+			</div>
+			<p class="help-block">Download will start and finish automatically unless an error occours. You may close the tab or keep it open.</p>
 
-</html>
+			<button id="songSubmit" type="submit" class="btn btn-success cop">Download Song</button>
+		</form>
+	</div>
+
+	<div class="tabContent hidden" id="playlist">
+		<h2> Download Playlist </h2>
+		<form>
+			<div class="form-group">
+				<label>Youtube playlist link</label>
+				<input type="text" class="form-control" id="playlistLink" placeholder="<link to playlist>">
+			</div>
+			<div class="form-group">
+				<label>Playlist Title</label>
+				<input type="text" class="form-control" id="playlistTitle" placeholder="<title of playlist>">
+			</div>
+			<p class="help-block">Download will start and finish automatically unless an error occours. You may close the tab or keep it open.</p>
+
+			<button id="playlistSubmit" type="submit" class="btn btn-success cop">Cop My Mixtape</button>
+		</form>
+	</div>
+</body>
