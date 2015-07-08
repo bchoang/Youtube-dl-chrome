@@ -1,0 +1,58 @@
+/*body {
+	padding: 5px;
+	background-color: #FCFBE3;
+}
+legend {
+	font-size: 11px;
+	color: gray;
+}
+fieldset{
+	font-size: 14px;
+}
+button {
+	margin: auto;
+	text-align: center;
+	background-color: #32CD32;
+	border: 1px solid;
+	border-color: green;
+	font-size: 20px;
+}*/
+/*#filepath {
+	width: 300px;
+	font-size: 14px;
+}
+#filename {
+	width: 300px;
+	font-size: 14px;
+}
+#kappa {
+	text-align: center;
+	padding-bottom: 0px;
+}*/
+
+.hidden {
+	display: none;
+	height:0px
+	line-height: 0px;
+	font-size: 0px;
+}
+
+body {
+	min-width: 500px;
+	height: 400px;
+}
+
+.tabContent{
+	padding: 5px;
+}
+
+.tabs{
+	padding: 5px;
+}
+.tab{
+	width: 100%;
+}
+
+.cop{
+	width: 100%;
+}
